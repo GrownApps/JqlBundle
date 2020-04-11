@@ -1,11 +1,11 @@
 <?php declare(strict_types=1);
 
-namespace JqlBundle\Hooks;
+namespace GrownApps\JqlBundle\Hooks;
 
 /**
  * Class JqlHookEvents
  *
- * @package JqlBundle\Hooks
+ * @package GrownApps\JqlBundle\Hooks
  */
 final class JqlHookEvents
 {

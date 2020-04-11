@@ -1,11 +1,11 @@
 <?php declare(strict_types=1);
 
-namespace JqlBundle\Utils;
+namespace GrownApps\JqlBundle\Utils;
 
 /**
  * Class JqlHelper
  *
- * @package JqlBundle\Utils
+ * @package GrownApps\JqlBundle\Utils
  */
 class JqlHelper
 {

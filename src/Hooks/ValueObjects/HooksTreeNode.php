@@ -1,13 +1,13 @@
 <?php declare(strict_types=1);
 
-namespace JqlBundle\Hooks\ValueObjects;
+namespace GrownApps\JqlBundle\Hooks\ValueObjects;
 
-use JqlBundle\Hooks\JqlHookInterface;
+use GrownApps\JqlBundle\Hooks\JqlHookInterface;
 
 /**
  * Class HooksTreeNode
  *
- * @package JqlBundle\Hooks
+ * @package GrownApps\JqlBundle\Hooks
  */
 class HooksTreeNode
 {

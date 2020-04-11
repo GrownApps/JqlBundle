@@ -1,11 +1,11 @@
 <?php declare(strict_types=1);
 
-namespace JqlBundle\Exceptions;
+namespace GrownApps\JqlBundle\Exceptions;
 
 /**
  * Class InvalidValueException
  *
- * @package JqlBundle\Exceptions
+ * @package GrownApps\JqlBundle\Exceptions
  */
 class InvalidValueException extends \RuntimeException
 {

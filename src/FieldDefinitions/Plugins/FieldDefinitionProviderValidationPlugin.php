@@ -1,10 +1,10 @@
 <?php
 
 
-namespace JqlBundle\FieldDefinitions\Plugins;
+namespace GrownApps\JqlBundle\FieldDefinitions\Plugins;
 
 use Doctrine\Common\Annotations\Reader;
-use JqlBundle\FieldDefinitions\IFieldsDefinitionProviderPlugin;
+use GrownApps\JqlBundle\FieldDefinitions\IFieldsDefinitionProviderPlugin;
 use Symfony\Component\Validator\Constraint;
 
 class FieldDefinitionProviderValidationPlugin implements IFieldsDefinitionProviderPlugin

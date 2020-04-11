@@ -1,22 +1,22 @@
 <?php
 
-namespace JqlBundle\Services;
+namespace GrownApps\JqlBundle\Services;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\ORM\OptimisticLockException;
 use Doctrine\ORM\ORMException;
 use Doctrine\ORM\TransactionRequiredException;
-use JqlBundle\Exceptions\EntityNotFoundException;
-use JqlBundle\Exceptions\FieldDefinitionException;
-use JqlBundle\Exceptions\InvalidValueException;
-use JqlBundle\FieldDefinitions\FieldDefinitionsProvider;
-use JqlBundle\Hooks\Events\PostDeleteEvent;
-use JqlBundle\Hooks\Events\PostFlushEvent;
-use JqlBundle\Hooks\Events\PreFetchEvent;
-use JqlBundle\Hooks\Events\PreFlushEvent;
-use JqlBundle\Hooks\HooksDispatcher;
-use JqlBundle\Hooks\JqlHookEvents;
+use GrownApps\JqlBundle\Exceptions\EntityNotFoundException;
+use GrownApps\JqlBundle\Exceptions\FieldDefinitionException;
+use GrownApps\JqlBundle\Exceptions\InvalidValueException;
+use GrownApps\JqlBundle\FieldDefinitions\FieldDefinitionsProvider;
+use GrownApps\JqlBundle\Hooks\Events\PostDeleteEvent;
+use GrownApps\JqlBundle\Hooks\Events\PostFlushEvent;
+use GrownApps\JqlBundle\Hooks\Events\PreFetchEvent;
+use GrownApps\JqlBundle\Hooks\Events\PreFlushEvent;
+use GrownApps\JqlBundle\Hooks\HooksDispatcher;
+use GrownApps\JqlBundle\Hooks\JqlHookEvents;
 use Symfony\Component\PropertyAccess\PropertyAccess;
 use Symfony\Component\PropertyAccess\PropertyAccessor;
 

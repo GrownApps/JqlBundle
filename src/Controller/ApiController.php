@@ -1,16 +1,16 @@
 <?php declare(strict_types=1);
 
-namespace JqlBundle\Controller;
+namespace GrownApps\JqlBundle\Controller;
 
 use Doctrine\ORM\OptimisticLockException;
 use Doctrine\ORM\ORMException;
 use Doctrine\ORM\TransactionRequiredException;
-use JqlBundle\FieldDefinitions\FieldDefinitionsProvider;
-use JqlBundle\Security\ISecurityProvider;
-use JqlBundle\Serialization\ExclusionStrategy;
-use JqlBundle\Services\QueryBuilder;
-use JqlBundle\Services\UpdateHandler;
-use JqlBundle\Utils\JqlHelper;
+use GrownApps\JqlBundle\FieldDefinitions\FieldDefinitionsProvider;
+use GrownApps\JqlBundle\Security\ISecurityProvider;
+use GrownApps\JqlBundle\Serialization\ExclusionStrategy;
+use GrownApps\JqlBundle\Services\QueryBuilder;
+use GrownApps\JqlBundle\Services\UpdateHandler;
+use GrownApps\JqlBundle\Utils\JqlHelper;
 use JMS\Serializer\SerializationContext;
 use JMS\Serializer\SerializerInterface;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -21,7 +21,7 @@ use Symfony\Component\Validator\Exception\ValidatorException;
 /**
  * Class ApiController
  *
- * @package JqlBundle\Controller
+ * @package GrownApps\JqlBundle\Controller
  */
 class ApiController
 {

@@ -1,15 +1,15 @@
 <?php
 
 
-namespace JqlBundle\Services;
+namespace GrownApps\JqlBundle\Services;
 
 
-use JqlBundle\Exceptions\NodesShouldBeArray;
-use JqlBundle\Utils\ComparisonOperatorNode;
-use JqlBundle\Utils\JqlHelper;
-use JqlBundle\Utils\LogicalOperatorNode;
-use JqlBundle\Utils\Node;
-use JqlBundle\Utils\PathNode;
+use GrownApps\JqlBundle\Exceptions\NodesShouldBeArray;
+use GrownApps\JqlBundle\Utils\ComparisonOperatorNode;
+use GrownApps\JqlBundle\Utils\JqlHelper;
+use GrownApps\JqlBundle\Utils\LogicalOperatorNode;
+use GrownApps\JqlBundle\Utils\Node;
+use GrownApps\JqlBundle\Utils\PathNode;
 
 class ConditionParser
 {

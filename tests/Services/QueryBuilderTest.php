@@ -1,15 +1,15 @@
 <?php
 
-namespace JqlBundle\Services;
+namespace GrownApps\JqlBundle\Services;
 
 use AppBundle\Services\Acl\FieldsPermissionLoader;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\Mapping\ClassMetadataInfo;
 use Doctrine\ORM\Query;
-use JqlBundle\FieldDefinitions\FieldDefinitionsProvider;
-use JqlBundle\Services\ConditionParser;
-use JqlBundle\Services\QueryBuilder;
-use JqlBundle\Services\SelectParser;
+use GrownApps\JqlBundle\FieldDefinitions\FieldDefinitionsProvider;
+use GrownApps\JqlBundle\Services\ConditionParser;
+use GrownApps\JqlBundle\Services\QueryBuilder;
+use GrownApps\JqlBundle\Services\SelectParser;
 use PHPUnit\Framework\TestCase;
 
 class QueryBuilderTest extends TestCase
@@ -48,7 +48,7 @@ class QueryBuilderTest extends TestCase
 
 		$fieldsDef->method('getFieldsDefinitions')->willReturn([
 			"foo" => [
-				"className" => "JqlBundle\\Entity\\Foo",
+				"className" => "GrownApps\\GrownApps\JqlBundle\Entity\\Foo",
 				"fields" => [
 					"a" => ['type' => 'string', 'ormType' => 'string'],
 					"b" => ['type' => 'string', 'ormType' => 'string'],
@@ -57,7 +57,7 @@ class QueryBuilderTest extends TestCase
 				],
 			],
 			"bar" => [
-				"className" => "JqlBundle\\Entity\\Bar",
+				"className" => "GrownApps\\GrownApps\JqlBundle\Entity\\Bar",
 				"fields" => [
 					"a" => ['type' => 'string', 'ormType' => 'string'],
 					"b" => ['type' => 'string', 'ormType' => 'string'],
@@ -90,7 +90,7 @@ class QueryBuilderTest extends TestCase
 		$query = ['foo' => ['a', 'b', ['bar' => ['a', 'b']]]];
 
 
-		$this->queryBuilderMock->expects($this->once())->method('from')->with('JqlBundle\\Entity\\Foo');
+		$this->queryBuilderMock->expects($this->once())->method('from')->with('GrownApps\\GrownApps\JqlBundle\Entity\\Foo');
 		$this->queryBuilderMock->expects($this->exactly(2))->method('addSelect')->withConsecutive(
 			[$this->equalTo('PARTIAL foo_bar.{id, a, b}')],
 			[$this->equalTo('PARTIAL foo.{id, a, b}')]
@@ -107,7 +107,7 @@ class QueryBuilderTest extends TestCase
 		$query = ['foo' => ['bar.foo.a']];
 
 
-		$this->queryBuilderMock->expects($this->once())->method('from')->with('JqlBundle\\Entity\\Foo');
+		$this->queryBuilderMock->expects($this->once())->method('from')->with('GrownApps\\GrownApps\JqlBundle\Entity\\Foo');
 		$this->queryBuilderMock->expects($this->exactly(3))->method('addSelect')->withConsecutive(
 			[$this->equalTo('PARTIAL foo_bar_foo.{id, a}')],
 			[$this->equalTo('PARTIAL foo_bar.{id}')],
@@ -128,7 +128,7 @@ class QueryBuilderTest extends TestCase
 		$query = ['bar' => ['foo.a', ['oof' => ['a', 'b']]]];
 
 
-		$this->queryBuilderMock->expects($this->once())->method('from')->with('JqlBundle\\Entity\\Bar');
+		$this->queryBuilderMock->expects($this->once())->method('from')->with('GrownApps\\GrownApps\JqlBundle\Entity\\Bar');
 		$this->queryBuilderMock->expects($this->exactly(3))->method('addSelect')->withConsecutive(
 			[$this->equalTo('PARTIAL bar_foo.{id, a}')],
 			[$this->equalTo('PARTIAL bar_oof.{id, a, b}')],
@@ -149,7 +149,7 @@ class QueryBuilderTest extends TestCase
 		$query = ['bar' => ['foo', 'oof']];
 
 
-		$this->queryBuilderMock->expects($this->once())->method('from')->with('JqlBundle\\Entity\\Bar');
+		$this->queryBuilderMock->expects($this->once())->method('from')->with('GrownApps\\GrownApps\JqlBundle\Entity\\Bar');
 		$this->queryBuilderMock->expects($this->exactly(3))->method('addSelect')->withConsecutive(
 			[$this->equalTo('bar_foo')],
 			[$this->equalTo('bar_oof')],
@@ -175,7 +175,7 @@ class QueryBuilderTest extends TestCase
 		];
 
 
-		$this->queryBuilderMock->expects($this->once())->method('from')->with('JqlBundle\\Entity\\Foo');
+		$this->queryBuilderMock->expects($this->once())->method('from')->with('GrownApps\\GrownApps\JqlBundle\Entity\\Foo');
 		$this->queryBuilderMock->expects($this->once())->method('add')->with('where');
 
 		$this->expressionBuilderMock->expects($this->once())->method('eq')->with('foo.a', ':foo_a');
@@ -197,7 +197,7 @@ class QueryBuilderTest extends TestCase
 		];
 
 
-		$this->queryBuilderMock->expects($this->once())->method('from')->with('JqlBundle\\Entity\\Foo');
+		$this->queryBuilderMock->expects($this->once())->method('from')->with('GrownApps\\GrownApps\JqlBundle\Entity\\Foo');
 		$this->queryBuilderMock->expects($this->once())->method('add')->with('where');
 
 		//todo test AND
@@ -223,7 +223,7 @@ class QueryBuilderTest extends TestCase
 		];
 
 
-		$this->queryBuilderMock->expects($this->once())->method('from')->with('JqlBundle\\Entity\\Foo', 'foo');
+		$this->queryBuilderMock->expects($this->once())->method('from')->with('GrownApps\\GrownApps\JqlBundle\Entity\\Foo', 'foo');
 		$this->queryBuilderMock->expects($this->once())->method('add')->with('where');
 		$this->queryBuilderMock->expects($this->once())->method('leftJoin')->with('foo.bar', 'foo_bar');
 
@@ -246,7 +246,7 @@ class QueryBuilderTest extends TestCase
 		];
 
 
-		$this->queryBuilderMock->expects($this->once())->method('from')->with('JqlBundle\\Entity\\Foo', 'foo');
+		$this->queryBuilderMock->expects($this->once())->method('from')->with('GrownApps\\GrownApps\JqlBundle\Entity\\Foo', 'foo');
 		$this->queryBuilderMock->expects($this->once())->method('add')->with('where');
 		$this->queryBuilderMock->expects($this->once())->method('leftJoin')->with('foo.bar', 'foo_bar');
 
@@ -269,7 +269,7 @@ class QueryBuilderTest extends TestCase
 		];
 
 
-		$this->queryBuilderMock->expects($this->once())->method('from')->with('JqlBundle\\Entity\\Foo', 'foo');
+		$this->queryBuilderMock->expects($this->once())->method('from')->with('GrownApps\\GrownApps\JqlBundle\Entity\\Foo', 'foo');
 		$this->queryBuilderMock->expects($this->once())->method('add')->with('where');
 		$this->queryBuilderMock->expects($this->once())->method('leftJoin')->with('foo.bar', 'foo_bar');
 
@@ -293,7 +293,7 @@ class QueryBuilderTest extends TestCase
 		];
 
 
-		$this->queryBuilderMock->expects($this->once())->method('from')->with('JqlBundle\\Entity\\Foo', 'foo');
+		$this->queryBuilderMock->expects($this->once())->method('from')->with('GrownApps\\GrownApps\JqlBundle\Entity\\Foo', 'foo');
 		$this->queryBuilderMock->expects($this->once())->method('add')->with('where');
 		$this->queryBuilderMock->expects($this->once())->method('leftJoin')->with('foo.bar', 'foo_bar');
 
@@ -318,7 +318,7 @@ class QueryBuilderTest extends TestCase
 		];
 
 
-		$this->queryBuilderMock->expects($this->once())->method('from')->with('JqlBundle\\Entity\\Foo', 'foo');
+		$this->queryBuilderMock->expects($this->once())->method('from')->with('GrownApps\\GrownApps\JqlBundle\Entity\\Foo', 'foo');
 		$this->queryBuilderMock->expects($this->once())->method('add')->with('where');
 		$this->queryBuilderMock->expects($this->exactly(2))->method('leftJoin')->withConsecutive(
 			['foo.bar', 'foo_bar'],
@@ -349,7 +349,7 @@ class QueryBuilderTest extends TestCase
 			],
 		];
 
-		$this->queryBuilderMock->expects($this->once())->method('from')->with('JqlBundle\\Entity\\Foo', 'foo');
+		$this->queryBuilderMock->expects($this->once())->method('from')->with('GrownApps\\GrownApps\JqlBundle\Entity\\Foo', 'foo');
 		$this->queryBuilderMock->expects($this->once())->method('add')->with('where');
 		$this->queryBuilderMock->expects($this->exactly(2))->method('leftJoin')->withConsecutive(
 			['foo.bar', 'foo_bar'],
@@ -380,7 +380,7 @@ class QueryBuilderTest extends TestCase
 		];
 
 
-		$this->queryBuilderMock->expects($this->once())->method('from')->with('JqlBundle\\Entity\\Foo', 'foo');
+		$this->queryBuilderMock->expects($this->once())->method('from')->with('GrownApps\\GrownApps\JqlBundle\Entity\\Foo', 'foo');
 		$this->queryBuilderMock->expects($this->once())->method('add')->with('where');
 		$this->queryBuilderMock->expects($this->exactly(3))->method('leftJoin')->withConsecutive(
 			['foo.bar', 'foo_bar'],
@@ -410,7 +410,7 @@ class QueryBuilderTest extends TestCase
 		];
 
 
-		$this->queryBuilderMock->expects($this->once())->method('from')->with('JqlBundle\\Entity\\Foo', 'foo');
+		$this->queryBuilderMock->expects($this->once())->method('from')->with('GrownApps\\GrownApps\JqlBundle\Entity\\Foo', 'foo');
 		$this->queryBuilderMock->expects($this->once())->method('add')->with('where');
 		$this->queryBuilderMock->expects($this->exactly(3))->method('leftJoin')->withConsecutive(
 			['foo.bar', 'foo_bar'],
@@ -440,7 +440,7 @@ class QueryBuilderTest extends TestCase
 		];
 
 
-		$this->queryBuilderMock->expects($this->once())->method('from')->with('JqlBundle\\Entity\\Foo', 'foo');
+		$this->queryBuilderMock->expects($this->once())->method('from')->with('GrownApps\\GrownApps\JqlBundle\Entity\\Foo', 'foo');
 		$this->queryBuilderMock->expects($this->once())->method('add')->with('where');
 		$this->queryBuilderMock->expects($this->exactly(3))->method('leftJoin')->withConsecutive(
 			['foo.bar', 'foo_bar'],
@@ -472,7 +472,7 @@ class QueryBuilderTest extends TestCase
 		];
 
 
-		$this->queryBuilderMock->expects($this->once())->method('from')->with('JqlBundle\\Entity\\Foo');
+		$this->queryBuilderMock->expects($this->once())->method('from')->with('GrownApps\\GrownApps\JqlBundle\Entity\\Foo');
 		$this->queryBuilderMock->expects($this->once())->method('add')->with('where');
 
 		$this->expressionBuilderMock->expects($this->exactly(1))->method('orX');
@@ -487,7 +487,7 @@ class QueryBuilderTest extends TestCase
 
 
 		$qb = $this->queryBuilder->createQuery($query);
-		$this->assertEquals("SELECT PARTIAL foo.{id, a, b} FROM JqlBundle\Entity\Foo foo WHERE foo.a = :foo_a OR foo.b = :foo_b", $qb->getDQL());
+		$this->assertEquals("SELECT PARTIAL foo.{id, a, b} FROM GrownApps\JqlBundle\Entity\Foo foo WHERE foo.a = :foo_a OR foo.b = :foo_b", $qb->getDQL());
 	}
 
 
@@ -511,7 +511,7 @@ class QueryBuilderTest extends TestCase
 		];
 
 
-		$this->queryBuilderMock->expects($this->once())->method('from')->with('JqlBundle\\Entity\\Foo');
+		$this->queryBuilderMock->expects($this->once())->method('from')->with('GrownApps\\GrownApps\JqlBundle\Entity\\Foo');
 		$this->queryBuilderMock->expects($this->once())->method('add')->with('where');
 
 		$this->expressionBuilderMock->expects($this->exactly(1))->method('orX');
@@ -561,7 +561,7 @@ class QueryBuilderTest extends TestCase
 
 
 		$qb = $this->queryBuilder->createQuery($query);
-		$this->assertEquals("SELECT PARTIAL foo.{id, a, b} FROM JqlBundle\Entity\Foo foo LEFT JOIN foo.rab foo_rab LEFT JOIN foo_rab.oof foo_rab_oof WHERE (foo.rab = :foo_rab OR foo_rab.foo = :foo_rab_foo OR (foo_rab_oof.a = :foo_rab_oof_a AND foo_rab_oof.b = :foo_rab_oof_b)) AND (foo.a > :foo_a AND foo.a < :foo_a_1) AND (foo.b >= :foo_b AND foo.b <= :foo_b_1) AND foo.bar IN(:foo_bar) AND :foo_c MEMBER OF foo.c",
+		$this->assertEquals("SELECT PARTIAL foo.{id, a, b} FROM GrownApps\JqlBundle\Entity\Foo foo LEFT JOIN foo.rab foo_rab LEFT JOIN foo_rab.oof foo_rab_oof WHERE (foo.rab = :foo_rab OR foo_rab.foo = :foo_rab_foo OR (foo_rab_oof.a = :foo_rab_oof_a AND foo_rab_oof.b = :foo_rab_oof_b)) AND (foo.a > :foo_a AND foo.a < :foo_a_1) AND (foo.b >= :foo_b AND foo.b <= :foo_b_1) AND foo.bar IN(:foo_bar) AND :foo_c MEMBER OF foo.c",
 			$qb->getDQL());
 	}
 }

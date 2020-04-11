@@ -1,6 +1,6 @@
 <?php
 
-namespace JqlBundle\FieldDefinitions\Annotation;
+namespace GrownApps\JqlBundle\FieldDefinitions\Annotation;
 
 use AppBundle\Services\Acl\Constants\Sections;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ConfigurationAnnotation;

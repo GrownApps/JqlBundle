@@ -1,11 +1,11 @@
 <?php
 
 
-namespace JqlBundle\DependencyInjection;
+namespace GrownApps\JqlBundle\DependencyInjection;
 
 
-use JqlBundle\FieldDefinitions\InMemoryCacheProvider;
-use JqlBundle\Security\DummySecurityProvider;
+use GrownApps\JqlBundle\FieldDefinitions\InMemoryCacheProvider;
+use GrownApps\JqlBundle\Security\DummySecurityProvider;
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
 

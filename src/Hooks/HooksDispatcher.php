@@ -1,10 +1,10 @@
 <?php declare(strict_types=1);
 
-namespace JqlBundle\Hooks;
+namespace GrownApps\JqlBundle\Hooks;
 
-use JqlBundle\Exceptions\HookException;
-use JqlBundle\Hooks\ValueObjects\HookContext;
-use JqlBundle\Hooks\ValueObjects\HooksTreeNode;
+use GrownApps\JqlBundle\Exceptions\HookException;
+use GrownApps\JqlBundle\Hooks\ValueObjects\HookContext;
+use GrownApps\JqlBundle\Hooks\ValueObjects\HooksTreeNode;
 use Symfony\Component\EventDispatcher\Event;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\RequestStack;
@@ -12,7 +12,7 @@ use Symfony\Component\HttpFoundation\RequestStack;
 /**
  * Class HooksDispatcher
  *
- * @package JqlBundle\Services
+ * @package GrownApps\JqlBundle\Services
  */
 class HooksDispatcher
 {

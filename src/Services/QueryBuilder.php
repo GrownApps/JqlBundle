@@ -1,16 +1,16 @@
 <?php
 
-namespace JqlBundle\Services;
+namespace GrownApps\JqlBundle\Services;
 
 use AppBundle\Services\Acl\FieldsPermissionLoader;
 use AppBundle\Services\Acl\IPermissionLoader;
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\ORM\Query;
-use JqlBundle\FieldDefinitions\FieldDefinitionsProvider;
-use JqlBundle\Utils\ComparisonOperatorNode;
-use JqlBundle\Utils\LogicalOperatorNode;
-use JqlBundle\Utils\Node;
-use JqlBundle\Utils\PathNode;
+use GrownApps\JqlBundle\FieldDefinitions\FieldDefinitionsProvider;
+use GrownApps\JqlBundle\Utils\ComparisonOperatorNode;
+use GrownApps\JqlBundle\Utils\LogicalOperatorNode;
+use GrownApps\JqlBundle\Utils\Node;
+use GrownApps\JqlBundle\Utils\PathNode;
 use Nette\Utils\Strings;
 
 class QueryBuilder

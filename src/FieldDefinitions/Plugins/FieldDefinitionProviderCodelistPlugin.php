@@ -1,14 +1,14 @@
 <?php
 
 
-namespace JqlBundle\FieldDefinitions\Plugins;
+namespace GrownApps\JqlBundle\FieldDefinitions\Plugins;
 
 use AppBundle\Entity\Codelist\CodeListEntity;
 use Doctrine\Common\Annotations\Reader;
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\ORM\Mapping\MappingException;
-use JqlBundle\FieldDefinitions\Annotation\ConditionalCodelist;
-use JqlBundle\FieldDefinitions\IFieldsDefinitionProviderPlugin;
+use GrownApps\JqlBundle\FieldDefinitions\Annotation\ConditionalCodelist;
+use GrownApps\JqlBundle\FieldDefinitions\IFieldsDefinitionProviderPlugin;
 
 class FieldDefinitionProviderCodelistPlugin implements IFieldsDefinitionProviderPlugin
 {

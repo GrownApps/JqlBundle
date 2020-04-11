@@ -1,6 +1,6 @@
 <?php
 
-namespace JqlBundle\FieldDefinitions;
+namespace GrownApps\JqlBundle\FieldDefinitions;
 
 /**
  * Interface IFieldsDefinitionProvider

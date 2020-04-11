@@ -1,12 +1,12 @@
 <?php
 
-namespace JqlBundle\Services;
+namespace GrownApps\JqlBundle\Services;
 
-use JqlBundle\Services\ConditionParser;
-use JqlBundle\Utils\ComparisonOperatorNode;
-use JqlBundle\Utils\LogicalOperatorNode;
-use JqlBundle\Utils\Node;
-use JqlBundle\Utils\PathNode;
+use GrownApps\JqlBundle\Services\ConditionParser;
+use GrownApps\JqlBundle\Utils\ComparisonOperatorNode;
+use GrownApps\JqlBundle\Utils\LogicalOperatorNode;
+use GrownApps\JqlBundle\Utils\Node;
+use GrownApps\JqlBundle\Utils\PathNode;
 use PHPUnit\Framework\TestCase;
 
 class ConditionParserTest extends TestCase

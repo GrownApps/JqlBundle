@@ -1,10 +1,10 @@
 <?php
 
 
-namespace JqlBundle\Utils;
+namespace GrownApps\JqlBundle\Utils;
 
 
-use JqlBundle\Exceptions\NodeIsNotListException;
+use GrownApps\JqlBundle\Exceptions\NodeIsNotListException;
 
 class Node
 {

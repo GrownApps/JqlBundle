@@ -1,11 +1,8 @@
 <?php
 
-namespace JqlBundle\Utils;
+namespace GrownApps\JqlBundle\Utils;
 
-use JqlBundle\Exceptions\NodeIsNotListException;
-use JqlBundle\Utils\LogicalOperatorNode;
-use JqlBundle\Utils\Node;
-use JqlBundle\Utils\PathNode;
+use GrownApps\JqlBundle\Exceptions\NodeIsNotListException;
 use PHPUnit\Framework\TestCase;
 
 class NodeTest extends TestCase

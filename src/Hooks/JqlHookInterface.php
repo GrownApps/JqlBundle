@@ -1,11 +1,11 @@
 <?php declare(strict_types=1);
 
-namespace JqlBundle\Hooks;
+namespace GrownApps\JqlBundle\Hooks;
 
 /**
  * Interface JqlHookInterface
  *
- * @package JqlBundle\Utils
+ * @package GrownApps\JqlBundle\Utils
  */
 interface JqlHookInterface
 {

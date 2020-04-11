@@ -1,11 +1,11 @@
 <?php declare(strict_types=1);
 
-namespace JqlBundle\Hooks\ValueObjects;
+namespace GrownApps\JqlBundle\Hooks\ValueObjects;
 
 /**
  * Class HookContext
  *
- * @package JqlBundle\Hooks
+ * @package GrownApps\JqlBundle\Hooks
  */
 class HookContext
 {

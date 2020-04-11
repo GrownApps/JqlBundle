@@ -1,7 +1,7 @@
 <?php
 
 
-namespace JqlBundle\Utils;
+namespace GrownApps\JqlBundle\Utils;
 
 
 class PathNode extends Node

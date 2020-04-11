@@ -1,21 +1,21 @@
 <?php
 
-namespace JqlBundle\Services;
+namespace GrownApps\JqlBundle\Services;
 
 use Doctrine\Common\Annotations\Reader;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\EntityRepository;
-use JqlBundle\Exceptions\EntityNotFoundException;
-use JqlBundle\Exceptions\FieldDefinitionException;
-use JqlBundle\FieldDefinitions\FieldDefinitionsProvider;
-use JqlBundle\FieldDefinitions\ICacheProvider;
-use JqlBundle\Hooks\HooksDispatcher;
-use JqlBundle\Services\EntityFactory;
-use JqlBundle\Services\UpdateHandler;
+use GrownApps\JqlBundle\Exceptions\EntityNotFoundException;
+use GrownApps\JqlBundle\Exceptions\FieldDefinitionException;
+use GrownApps\JqlBundle\FieldDefinitions\FieldDefinitionsProvider;
+use GrownApps\JqlBundle\FieldDefinitions\ICacheProvider;
+use GrownApps\JqlBundle\Hooks\HooksDispatcher;
+use GrownApps\JqlBundle\Services\EntityFactory;
+use GrownApps\JqlBundle\Services\UpdateHandler;
 use PHPUnit\Framework\TestCase;
-use JqlBundle\Bar;
-use JqlBundle\Baz;
-use JqlBundle\Foo;
+use GrownApps\JqlBundle\Bar;
+use GrownApps\JqlBundle\Baz;
+use GrownApps\JqlBundle\Foo;
 
 class UpdateHandlerTest extends TestCase
 {
@@ -26,11 +26,11 @@ class UpdateHandlerTest extends TestCase
 
 	private $updateHandler;
 
-	const GA_BUNDLE_ENTITY_FOO = "JqlBundle\\Entity\\Foo";
+	const GA_BUNDLE_ENTITY_FOO = "GrownApps\\JqlBundle\\Entity\\Foo";
 
-	const GA_BUNDLE_ENTITY_BAR = "JqlBundle\\Entity\\Bar";
+	const GA_BUNDLE_ENTITY_BAR = "GrownApps\\JqlBundle\\Entity\\Bar";
 
-	const GA_BUNDLE_ENTITY_BAZ = "JqlBundle\\Entity\\Baz";
+	const GA_BUNDLE_ENTITY_BAZ = "GrownApps\\JqlBundle\\Entity\\Baz";
 
 	private $fooRepository;
 

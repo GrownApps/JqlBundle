@@ -1,8 +1,7 @@
 <?php
 
-namespace JqlBundle\Utils;
+namespace GrownApps\JqlBundle\Utils;
 
-use JqlBundle\Utils\JqlHelper;
 use PHPUnit\Framework\TestCase;
 
 class JqlHelperTest extends TestCase

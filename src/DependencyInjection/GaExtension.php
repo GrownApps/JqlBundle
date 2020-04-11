@@ -1,10 +1,10 @@
 <?php declare(strict_types=1);
 
-namespace JqlBundle\DependencyInjection;
+namespace GrownApps\JqlBundle\DependencyInjection;
 
-use JqlBundle\Controller\ApiController;
-use JqlBundle\FieldDefinitions\FieldDefinitionsProvider;
-use JqlBundle\Hooks\JqlHookInterface;
+use GrownApps\JqlBundle\Controller\ApiController;
+use GrownApps\JqlBundle\FieldDefinitions\FieldDefinitionsProvider;
+use GrownApps\JqlBundle\Hooks\JqlHookInterface;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Extension\Extension;
@@ -14,7 +14,7 @@ use Symfony\Component\DependencyInjection\Reference;
 /**
  * Class GaExtension
  *
- * @package JqlBundle\DependencyInjection
+ * @package GrownApps\JqlBundle\DependencyInjection
  */
 class GaExtension extends Extension
 {

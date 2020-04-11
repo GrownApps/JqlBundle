@@ -1,12 +1,12 @@
 <?php
 
 
-namespace JqlBundle\Serialization;
+namespace GrownApps\JqlBundle\Serialization;
 
 
 use Doctrine\ORM\PersistentCollection;
-use JqlBundle\Exceptions\FieldDefinitionException;
-use JqlBundle\FieldDefinitions\FieldDefinitionsProvider;
+use GrownApps\JqlBundle\Exceptions\FieldDefinitionException;
+use GrownApps\JqlBundle\FieldDefinitions\FieldDefinitionsProvider;
 use JMS\Serializer\Context;
 use JMS\Serializer\Exclusion\ExclusionStrategyInterface;
 use JMS\Serializer\Metadata\ClassMetadata;

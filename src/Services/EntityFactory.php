@@ -1,7 +1,7 @@
 <?php
 
 
-namespace JqlBundle\Services;
+namespace GrownApps\JqlBundle\Services;
 
 
 class EntityFactory

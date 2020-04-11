@@ -6,13 +6,13 @@
 
 	<services>
 		<defaults autowire="true" autoconfigure="true" public="false"></defaults>
-		<prototype namespace="JqlBundle\" resource="../../*" exclude="../../{DependencyInjection,Exceptions,Resources,Hooks,Utils}"/>
+		<prototype namespace="GrownApps\JqlBundle\" resource="../../*" exclude="../../{DependencyInjection,Exceptions,Resources,Hooks,Utils}"/>
 
-		<service id="JqlBundle\Hooks\HooksDispatcher" public="false">
+		<service id="GrownApps\JqlBundle\Hooks\HooksDispatcher" public="false">
 			<argument type="tagged" tag="ga.jql_hook" />
 			<argument type="service" id="request_stack"/>
 		</service>
 
-		<service id="JqlBundle\Controller\ApiController" public="true"></service>
+		<service id="GrownApps\JqlBundle\Controller\ApiController" public="true"></service>
 	</services>
 </container>

@@ -1,9 +1,9 @@
 <?php
 
-namespace JqlBundle\Services;
+namespace GrownApps\JqlBundle\Services;
 
-use JqlBundle\Exceptions\NodesShouldBeArray;
-use JqlBundle\Services\SelectParser;
+use GrownApps\JqlBundle\Exceptions\NodesShouldBeArray;
+use GrownApps\JqlBundle\Services\SelectParser;
 use PHPUnit\Framework\TestCase;
 
 class SelectParserTest extends TestCase

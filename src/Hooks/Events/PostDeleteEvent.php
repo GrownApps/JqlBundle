@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace JqlBundle\Hooks\Events;
+namespace GrownApps\JqlBundle\Hooks\Events;
 
 use Symfony\Component\EventDispatcher\Event;
 

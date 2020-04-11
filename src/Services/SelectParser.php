@@ -1,11 +1,11 @@
 <?php
 
 
-namespace JqlBundle\Services;
+namespace GrownApps\JqlBundle\Services;
 
 
-use JqlBundle\Exceptions\NodesShouldBeArray;
-use JqlBundle\Utils\Node;
+use GrownApps\JqlBundle\Exceptions\NodesShouldBeArray;
+use GrownApps\JqlBundle\Utils\Node;
 
 class SelectParser
 {

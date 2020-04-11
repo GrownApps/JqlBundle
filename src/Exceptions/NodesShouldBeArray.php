@@ -1,7 +1,7 @@
 <?php
 
 
-namespace JqlBundle\Exceptions;
+namespace GrownApps\JqlBundle\Exceptions;
 
 
 class NodesShouldBeArray extends \Exception

@@ -1,7 +1,7 @@
 <?php
 
 
-namespace JqlBundle\FieldDefinitions;
+namespace GrownApps\JqlBundle\FieldDefinitions;
 
 
 class InMemoryCacheProvider implements ICacheProvider

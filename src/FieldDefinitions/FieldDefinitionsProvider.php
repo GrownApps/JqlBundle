@@ -1,6 +1,6 @@
 <?php
 
-namespace JqlBundle\FieldDefinitions;
+namespace GrownApps\JqlBundle\FieldDefinitions;
 
 use AppBundle\Annotation\TrackedProperty;
 use AppBundle\Entity\Codelist\CodeListEntity;
@@ -9,9 +9,9 @@ use Doctrine\Common\Annotations\Reader;
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\ORM\Mapping\ClassMetadataInfo;
 use Doctrine\ORM\Mapping\MappingException;
-use JqlBundle\Exceptions\FieldDefinitionException;
-use JqlBundle\FieldDefinitions\Annotation\FieldDefinition;
-use JqlBundle\FieldDefinitions\Annotation\FieldDefinitionClass;
+use GrownApps\JqlBundle\Exceptions\FieldDefinitionException;
+use GrownApps\JqlBundle\FieldDefinitions\Annotation\FieldDefinition;
+use GrownApps\JqlBundle\FieldDefinitions\Annotation\FieldDefinitionClass;
 use hanneskod\classtools\Iterator\ClassIterator;
 use Symfony\Component\Finder\Finder;
 
@@ -112,7 +112,7 @@ class FieldDefinitionsProvider
 			}
 
 			foreach ($properties as $property) {
-				/** @var \JqlBundle\FieldDefinitions\Annotation\FieldDefinition $fieldDefinition */
+				/** @var \GrownApps\JqlBundle\FieldDefinitions\Annotation\FieldDefinition $fieldDefinition */
 				$fieldDefinition = $this->annotationReader->getPropertyAnnotation($property, FieldDefinition::class);
 
 				if (!$fieldDefinition) {
