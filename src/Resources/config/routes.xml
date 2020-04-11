@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<routes xmlns="http://symfony.com/schema/routing"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://symfony.com/schema/routing
+        http://symfony.com/schema/routing/routing-1.0.xsd">
+	<route id="ga_retrieve" methods="GET" controller="JqlBundle\Controller\ApiController:retrieve" path="/jql"></route>
+	<route id="ga_update" methods="PATCH" controller="JqlBundle\Controller\ApiController:update" path="/jql"></route>
+	<route id="ga_create" methods="POST" controller="JqlBundle\Controller\ApiController:create" path="/jql"></route>
+	<route id="ga_delete" methods="DELETE" controller="JqlBundle\Controller\ApiController:delete" path="/jql"></route>
+</routes>
