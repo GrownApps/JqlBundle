@@ -12,7 +12,17 @@
 	}
   ],
   "require": {
-	"php": ">=7.2.0"
+	"php": ">=7.2.0",
+	"ext-json": "*",
+	"jms/serializer": "^1.8",
+	"jms/serializer-bundle": "^2.1",
+	"doctrine/orm": "^2.5",
+	"nette/utils": "3.*",
+	"symfony/property-access": ">=4.0.0"
+  },
+  "require-dev": {
+	"mockery/mockery": "^1.0",
+	"phpunit/phpunit": "6.5.*"
   },
   "autoload": {
 	"psr-4": {

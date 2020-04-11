@@ -10,8 +10,6 @@ use GrownApps\JqlBundle\Exceptions\FieldDefinitionException;
 use GrownApps\JqlBundle\FieldDefinitions\FieldDefinitionsProvider;
 use GrownApps\JqlBundle\FieldDefinitions\ICacheProvider;
 use GrownApps\JqlBundle\Hooks\HooksDispatcher;
-use GrownApps\JqlBundle\Services\EntityFactory;
-use GrownApps\JqlBundle\Services\UpdateHandler;
 use PHPUnit\Framework\TestCase;
 use GrownApps\JqlBundle\Bar;
 use GrownApps\JqlBundle\Baz;

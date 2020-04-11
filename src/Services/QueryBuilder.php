@@ -19,9 +19,6 @@ class QueryBuilder
 	/** @var array */
 	private $fieldDefinitions;
 
-	/** @var IPermissionLoader */
-	private $permissionLoader;
-
 	/** @var SelectParser */
 	private $selectParser;
 
@@ -36,20 +33,18 @@ class QueryBuilder
 	 * FundingService constructor.
 	 *
 	 * @param FieldDefinitionsProvider $fieldsDefinitionProvider
-	 * @param FieldsPermissionLoader $permissionLoader
+
 	 * @param EntityManagerInterface $entityManager
 	 * @param SelectParser $selectBuilder
 	 * @param ConditionParser $whereBuilder
 	 */
 	public function __construct(
 		FieldDefinitionsProvider $fieldsDefinitionProvider,
-		FieldsPermissionLoader $permissionLoader,
 		EntityManagerInterface $entityManager,
 		SelectParser $selectBuilder,
 		ConditionParser $whereBuilder
 	) {
 		$this->fieldDefinitions = $fieldsDefinitionProvider->getFieldsDefinitions();
-		$this->permissionLoader = $permissionLoader;
 		$this->entityManager = $entityManager;
 		$this->selectParser = $selectBuilder;
 		$this->conditionParser = $whereBuilder;
