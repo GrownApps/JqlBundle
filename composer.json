@@ -4,7 +4,7 @@
   "description": "Simple JSON Query Language bundle",
   "type": "symfony-bundle",
   "minimum-stability": "dev",
-  "license": "mit",
+  "license": "MIT",
   "authors": [
 	{
 	  "name": "Tomas Putnoky",
