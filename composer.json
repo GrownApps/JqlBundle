@@ -1,5 +1,6 @@
 {
   "name": "grownapps/jql-bundle",
+  "version": "0.0.1",
   "description": "Simple JSON Query Language bundle",
   "type": "symfony-bundle",
   "minimum-stability": "dev",
