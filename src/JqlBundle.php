@@ -1,6 +1,6 @@
 <?php
 
-namespace JqlBundle;
+namespace GrownApps\JqlBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
