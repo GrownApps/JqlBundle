@@ -24,7 +24,7 @@ class JqlExtension extends Extension
 		$loader = new XmlFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));
 		$loader->load('services.xml');
 
-		$configuration = new Configuration($container->getParameter('kernel.root_dir') . '/../src/AppBundle/Entity');
+		$configuration = new Configuration($container->getParameter('kernel.project_dir') . '/src/Entity');
 		$config = $this->processConfiguration($configuration, $configs);
 
 		$definition = $container->getDefinition(FieldDefinitionsProvider::class);
