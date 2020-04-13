@@ -19,7 +19,8 @@
 	"doctrine/orm": "^2.5",
 	"nette/utils": "^3.0",
 	"symfony/property-access": "^4.0 || ^5.0",
-	"symfony/event-dispatcher": "^4.0 || ^5.0"
+	"symfony/event-dispatcher": "^4.0 || ^5.0",
+    "hanneskod/classtools": "dev-master"
   },
   "require-dev": {
 	"mockery/mockery": "^1.0",

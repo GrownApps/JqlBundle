@@ -112,7 +112,7 @@ class FieldDefinitionsProvider
 			}
 
 			foreach ($properties as $property) {
-				/** @var \GrownApps\JqlBundle\FieldDefinitions\Annotation\FieldDefinition $fieldDefinition */
+				/** @var FieldDefinition $fieldDefinition */
 				$fieldDefinition = $this->annotationReader->getPropertyAnnotation($property, FieldDefinition::class);
 
 				if (!$fieldDefinition) {
@@ -146,10 +146,10 @@ class FieldDefinitionsProvider
 				}
 
 				//TODO convert to plugin
-				$tracked = $this->annotationReader->getPropertyAnnotation($property, TrackedProperty::class);
-				if ($tracked) {
-					$this->definitions[$shortName]['fields'][$property->getName()]['tracked'] = true;
-				}
+				//$tracked = $this->annotationReader->getPropertyAnnotation($property, TrackedProperty::class);
+				//if ($tracked) {
+				//	$this->definitions[$shortName]['fields'][$property->getName()]['tracked'] = true;
+				//}
 
 				try {
 					$fieldMapping = $metaData->getFieldMapping($property->getName());
@@ -166,12 +166,12 @@ class FieldDefinitionsProvider
 						$this->definitions[$shortName]['fields'][$property->getName()]['ormAssociation']['targetEntity'] = $this->resolveTargetEntity($associationMapping['targetEntity']);
 						$this->definitions[$shortName]['fields'][$property->getName()]['ormAssociation']['targetEntityClassName'] = $associationMapping['targetEntity'];
 						$this->definitions[$shortName]['fields'][$property->getName()]['ormAssociation']['mappedBy'] = $this->associationToText($associationMapping['type']) != self::ASSOC_MANY_TO_MANY ? $associationMapping['mappedBy'] : $associationMapping['mappedBy'] ?? $associationMapping['inversedBy'];
-						if (is_subclass_of($associationMapping['targetEntity'], CodeListEntity::class)) {
-							$this->definitions[$shortName]['fields'][$property->getName()]['type'] = 'codelist';
-							$this->definitions[$shortName]['fields'][$property->getName()]['hasDefaultOption'] = in_array(HasDefaultOptionCodelist::class, class_implements($associationMapping['targetEntity']));
-						} else {
+						//if (is_subclass_of($associationMapping['targetEntity'], CodeListEntity::class)) {
+							//$this->definitions[$shortName]['fields'][$property->getName()]['type'] = 'codelist';
+							//$this->definitions[$shortName]['fields'][$property->getName()]['hasDefaultOption'] = in_array(HasDefaultOptionCodelist::class, class_implements($associationMapping['targetEntity']));
+						//} else {
 							$this->definitions[$shortName]['fields'][$property->getName()]['type'] = $this->resolveAssociationType($associationMapping['type']);
-						}
+						//}
 
 						$this->definitions[$shortName]['fields'][$property->getName()]['targetEntity'] = $this->resolveTargetEntity($associationMapping['targetEntity']);
 					} catch (MappingException $e) {
