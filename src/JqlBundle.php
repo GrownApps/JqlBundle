@@ -9,7 +9,7 @@ class JqlBundle extends Bundle
 {
 	protected function getContainerExtensionClass()
 	{
-		return new JqlExtension();
+		return JqlExtension::class;
 	}
 
 }
