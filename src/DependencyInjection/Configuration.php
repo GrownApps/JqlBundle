@@ -27,8 +27,8 @@ class Configuration implements ConfigurationInterface
 
 	public function getConfigTreeBuilder()
 	{
-		$treeBuilder = new TreeBuilder();
-		$rootNode = $treeBuilder->root('ga');
+		$treeBuilder = new TreeBuilder('jql');
+		$rootNode = $treeBuilder->getRootNode();
 
 		$rootNode->children()
 			->variableNode('entities_dir')->defaultValue($this->entitiesDir)->end()
