@@ -2,7 +2,7 @@
 
 namespace GrownApps\JqlBundle\Hooks\Events;
 
-use Symfony\Component\EventDispatcher\Event;
+use Symfony\Contracts\EventDispatcher\Event;
 
 class PostFlushEvent extends Event
 {

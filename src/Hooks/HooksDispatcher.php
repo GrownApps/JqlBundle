@@ -5,7 +5,7 @@ namespace GrownApps\JqlBundle\Hooks;
 use GrownApps\JqlBundle\Exceptions\HookException;
 use GrownApps\JqlBundle\Hooks\ValueObjects\HookContext;
 use GrownApps\JqlBundle\Hooks\ValueObjects\HooksTreeNode;
-use Symfony\Component\EventDispatcher\Event;
+use Symfony\Contracts\EventDispatcher\Event;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\RequestStack;
 
