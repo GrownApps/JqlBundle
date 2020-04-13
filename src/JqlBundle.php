@@ -7,9 +7,9 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 class JqlBundle extends Bundle
 {
-	protected function getContainerExtensionClass()
+	public function getContainerExtension()
 	{
-		return JqlExtension::class;
+		return new JqlExtension();
 	}
 
 }
