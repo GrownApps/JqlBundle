@@ -16,7 +16,7 @@ use Symfony\Component\DependencyInjection\Reference;
  *
  * @package GrownApps\JqlBundle\DependencyInjection
  */
-class GaExtension extends Extension
+class JqlExtension extends Extension
 {
 
 	public function load(array $configs, ContainerBuilder $container)
