@@ -127,7 +127,7 @@ class FieldDefinitionsProvider
 				$this->definitions[$shortName]['fields'][$property->getName()] = [
 					'id' => "{$class->getName()}::{$property->getName()}", //perhaps not needed
 					'title' => $fieldDefinition->getTitle(),
-					'section' => $fieldDefinition->getSection(),
+					//'section' => $fieldDefinition->getSection(),
 					'description' => $fieldDefinition->getDescription(),
 					'skipProcessing' => $fieldDefinition->isSkippedProcessing(),
 					'toString' => $fieldDefinition->getToString(),
