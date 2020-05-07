@@ -23,8 +23,8 @@ final class FieldDefinition extends ConfigurationAnnotation
 	/** @var string */
 	private $type;
 
-	/** @var string */
-	private $section = Sections::SECTION_DEFAULT;
+//	/** @var string */
+//	private $section = Sections::SECTION_DEFAULT;
 
 	/** @var string */
 	private $description = '';
@@ -60,24 +60,6 @@ final class FieldDefinition extends ConfigurationAnnotation
 	public function setTitle($title)
 	{
 		$this->title = $title;
-	}
-
-
-	/**
-	 * @return string
-	 */
-	public function getSection()
-	{
-		return $this->section;
-	}
-
-
-	/**
-	 * @param string $section
-	 */
-	public function setSection($section)
-	{
-		$this->section = $section;
 	}
 
 
