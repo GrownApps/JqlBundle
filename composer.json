@@ -20,7 +20,8 @@
 	"nette/utils": "^3.0",
 	"symfony/property-access": "^4.0 || ^5.0",
 	"symfony/event-dispatcher": "^4.0 || ^5.0",
-    "hanneskod/classtools": "dev-master"
+    "hanneskod/classtools": "dev-master",
+    "sensio/framework-extra-bundle": "^5.5@dev"
   },
   "require-dev": {
 	"mockery/mockery": "^1.0",

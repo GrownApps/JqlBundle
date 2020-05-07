@@ -8,6 +8,8 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\ConfigurationAnnotation;
  * Class FieldDefinitionClass
  * @Annotation
  * @package AppBundle\Annotation
+ *
+ * @todo use doctrine annotations directly
  */
 final class FieldDefinitionClass extends ConfigurationAnnotation
 {
